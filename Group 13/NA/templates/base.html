@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+   <head>
+   	  <title>Numerical Analysis</title>
+   </head>
+   <body>
+    <link rel="stylesheet" href="../static/css/super.css">
+    <h2>AVERAGE OF SET OF N NUMBERS</h2>
+    <div>
+     <form action='/' method=post>
+    
+       {{ form1.hidden_tag() }}
+ 
+       {{ form1.message.label }}<br>
+       {{ form1.message }}<br><br>
+ 
+       {{ form1.submit }}
+     </form>
+    </div>
+	{% if ch == 'Third' %}
+    <h3>Average = {{avg}}</h3>
+	{% endif %}
+  
+    <div> 
+      <h2 id="plot">PLOT THE GRAPH OF LAGRANGE POLYNOMIAL</h2>
+
+     <form action='/' method=post>
+    
+       {{ form2.hidden_tag() }}
+ 
+       {{ form2.x_cor.label }}<br>
+       {{ form2.x_cor }}<br><br>
+
+       {{ form2.y_cor.label }}<br>
+       {{ form2.y_cor }}<br><br>
+ 
+       {{ form2.submit }}
+     </form>
+    </div> 
+	{% if ch == 'Second' %}
+    <img src="../static/img/graph.png" height="450px" width="450px">
+	{% endif %}
+	
+   </body>
+</html>

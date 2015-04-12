@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  
+  <head>
+ 
+    <title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="../static/css/super.css">
+  </head>
+
+  <body>
+  	<h1>STUDENT DATABASE</h1>
+	   <img src="../static/img/deep.png" height="333px" width="333px">
+	<div class="full_info">   
+	   {% block student %}
+	   {% endblock %}
+	</div>
+	
+	   <h2 id="name">COURSES TAKEN</h2>
+	   <p id="courses">|Engineering Mathematics-1| |Physics-1| |Human Values-1| |Engineering Mathematics-2| |Engineering Mechanics| |Computer Programming| 
+	   |IT Workshop-1| |Engineering Drawing| |Physical Education| |Fundamental of Electrical Engineering| |Manufacturing Practices|</p>
+	  <div class="academic">
+	   <h2>ACADEMIC DETAILS</h2>
+	   <p>{% block academic %}{% endblock %}</p>
+  	  </div>
+	  <div class="address">
+	   <h2>HOME ADDRESS</h2>
+	   <p>{% block address %}{% endblock %}</p>
+  	  </div>
+	  
+
+  </body>
+</html>
